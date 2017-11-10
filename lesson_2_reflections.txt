@@ -2,4 +2,20 @@ What happens when you initialize a repository? why do you need to do it?
 When you initialize a repository, the .git folder is added in the folder to enable git commands in the folder.
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
-the staging area is the area where files to be committed in the repository are placed from the working directory. It enables one to commit only files they want to commit as opposed to committing a whole working directory
+the staging area is the area where files to be committed in the repository are placed from the working directory. It enables one to commit only files they want to commit as opposed to committing a whole working directory.
+
+How can you use the staging area to make sure you have one commit per logical change?
+After every logical change (or after only one logical change has been made in each file), run "git add filename" to stage the file then "git commit -m 'comment'" to commit the change. Then continue to the next logical change (or next already changed file)
+
+What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+Branches would be helpful in keeping the history organized when 2 parallel versions of the project should be maintained from now. Branches make sure you can always switch to a parallel version of the project without having to worry about incremental changes of each branch
+
+How do the diagrams help you visualize the branch structure?
+the diagrams help visualize the branch structure by showing the parents of each commit and whether they are accessible or not
+
+What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
+the result of merging two branches together is the combination of changes made in both files. We represent it in the diagram to help us better understand the structure of the logs
+
+
+What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
+Git's automatic mergin makes sure time is not wasted as it would be on manually merging files, especially when there are many changes to merge. But sometimes it's better to manually merge files as git wouldn't know how to resolve conflicts.
